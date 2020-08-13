@@ -1,0 +1,26 @@
+server:
+  port: 80
+
+spring:
+  thymeleaf:
+    cache: false #关闭thymeleaf缓存
+  # 数据源配置
+  datasource:
+    username: root
+    password: Love1303
+    url: jdbc:mysql://127.0.0.1:3306/dyb?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8
+    #mysql8版本以上驱动包指定新的驱动类
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mengxuegu:
+  security:
+    authentication:
+      loginPage: /login/page # 响应认证(登录)页面的URL
+      loginProcessingUrl: /login/form # 登录表单提交处理的url
+      usernameParameter: name # 登录表单提交的用户名的属性名
+      passwordParameter: pwd  # 登录表单提交的密码的属性名
+      staticPaths: # 静态资源 "/dist/**", "/modules/**", "/plugins/**"
+        - /dist/**
+        - /modules/**
+        - /plugins/**
+      loginType: REDIRECT # 认证之后 响应的类型：JSON/REDIRECT
