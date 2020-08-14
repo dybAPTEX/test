@@ -47,6 +47,17 @@
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
 
+        <!--采用redis来管理session
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.session</groupId>
+            <artifactId>spring-session-data-redis</artifactId>
+        </dependency>
+        -->
+
         <!--解决找不到 javax.annotation.meta.When.MAYBE
         <dependency>
             <groupId>com.google.code.findbugs</groupId>

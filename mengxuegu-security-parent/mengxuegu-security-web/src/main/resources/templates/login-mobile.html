@@ -46,7 +46,7 @@
           <input type="text" name="code" class="form-control" placeholder="验证码">
           </div>
           <div class="col-5">
-              <a id="sendCode" th:attr="code_url=@{/code/mobile?mobile=}" class="btn  btn-outline-primary btn-large" href="#"> 获取验证码 </a>
+              <a id="sendCode"   th:attr="code_url=@{/code/mobile?mobile=}" class="btn  btn-outline-primary btn-large" href="#"> 获取验证码 </a>
           </div>
         </div>
 
@@ -114,6 +114,7 @@
             alert("手机号不能为空");
             return;
         }
+        // /code/mobile?mobile=123123123
         var url = $(this).attr("code_url") + mobile;
         $.get(url, function(data){
             alert(data.code === 200 ? "发送成功": "发送失败");

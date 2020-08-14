@@ -13,11 +13,11 @@
   <!-- /.navbar -->
 
   <!-- 左侧区域 Main Sidebar Container -->
-  <th:block th:replace="fragments/main-sidebar"/>
+  <th:block th:replace="fragments/main-sidebar(activeUrl = '/')"/>
 
   <!-- 右侧主区域 Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-      <img th:src="@{/modules/img/index.jpg}" src="../modules/img/index.jpg" width="100%" height="100%">
+    <img th:src="@{/modules/img/index.jpg}" src="../modules/img/index.jpg" width="100%" height="100%">
   </div>
   <!-- /.content-wrapper -->
 
